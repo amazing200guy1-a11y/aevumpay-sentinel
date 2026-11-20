@@ -3,309 +3,395 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AevumPay Sentinel — Autonomous Agentic Payables & Settlement Protocol | QDay</title>
+  <title>AevumPay Sentinel — Institutional Agentic Payables Protocol | QDay</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <style>
+    /* ══════════════════════════════════════════════════════════════
+       AEVUMPAY SENTINEL — INSTITUTIONAL AEROSPACE TITANIUM & GUNMETAL
+       ══════════════════════════════════════════════════════════════ */
+
     :root {
-      --bg-space: #03060E;
-      --bg-panel: #090F1D;
-      --bg-card: #0D1629;
-      --bg-card-hover: #121E36;
-      --border-subtle: #1E2B45;
-      --border-bright: #2B3D5E;
-      --neon-cyan: #00F0FF;
-      --neon-green: #00FF88;
-      --alert-crimson: #FF3366;
-      --warning-amber: #FFB020;
-      --purple-pulse: #8B5CF6;
-      --text-pure: #F8FAFC;
-      --text-titanium: #94A3B8;
+      --bg: #04070D;
+      --bg-secondary: #080C14;
+
+      /* Sculpted Gunmetal Titanium Stack */
+      --card-top: #232C3B;
+      --card-mid: #171E2A;
+      --card-base: #0F131C;
+      --bg-tray: #121824;
+      --bg-tray-hover: #161D2B;
+
+      /* Titanium Metallic Hairlines & Bevels */
+      --border: rgba(200, 220, 240, 0.12);
+      --border-chamfer: rgba(200, 220, 240, 0.18);
+      --border-hover: rgba(200, 220, 240, 0.32);
+      --border-accent: rgba(125, 211, 252, 0.25);
+      --inset: rgba(200, 220, 240, 0.14);
+      --shadow: 0 16px 45px rgba(0, 0, 0, 0.75);
+
+      /* Titanium & Metal Values */
+      --text: #F1F5F9;
+      --text-dim: #94A3B8;
+      --text-slate: #8A98A8;
       --text-muted: #64748B;
-      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --platinum: #E2E8F0;
+      --platinum-bright: #F8FAFC;
+      --steel: #475569;
+
+      /* Cold Aerospace Ice & Midnight Violet */
+      --ice: #7DD3FC;
+      --ice-dim: rgba(125, 211, 252, 0.10);
+      --midnight-violet: #A78BFA;
+      --midnight-violet-dim: rgba(167, 139, 250, 0.12);
+
+      /* Precision Telemetry Indicators */
+      --emerald: #10B981;
+      --emerald-dim: rgba(16, 185, 129, 0.12);
+      --crimson: #E11D48;
+      --crimson-dim: rgba(225, 29, 72, 0.12);
+      --amber: #F59E0B;
+      --amber-dim: rgba(245, 158, 11, 0.12);
+
       --font-mono: 'JetBrains Mono', monospace;
-      --font-display: 'Space Grotesk', sans-serif;
+      --font-ui: 'Outfit', sans-serif;
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-xl: 18px;
+      --transition: 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      background-color: var(--bg-space);
-      color: var(--text-pure);
-      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-ui);
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-      background-image: 
-        radial-gradient(circle at 15% 15%, rgba(0, 240, 255, 0.04) 0%, transparent 40%),
-        radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.03) 0%, transparent 40%),
-        linear-gradient(rgba(30, 43, 69, 0.15) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(30, 43, 69, 0.15) 1px, transparent 1px);
-      background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
     }
 
-    /* HEADER */
-    header {
-      background: rgba(9, 15, 29, 0.85);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 16px 36px;
+    /* Ambient Titanium Sub-mesh Grid */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(125, 211, 252, 0.05), transparent 70%),
+        radial-gradient(circle at 12% 20%, rgba(167, 139, 250, 0.04), transparent 45%),
+        radial-gradient(circle at 88% 70%, rgba(16, 185, 129, 0.03), transparent 50%),
+        linear-gradient(rgba(200, 220, 240, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 220, 240, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 28px 60px;
+    }
+
+    /* Precision Micro SVGs */
+    .ico {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    /* ═══════════════ TOP NAV BAR ═══════════════ */
+    .top-nav {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 50;
+      padding: 22px 0 18px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
     }
 
-    .brand-wrap {
+    .brand-group {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
     }
 
-    .brand-icon-box {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, rgba(0, 240, 255, 0.2) 0%, rgba(0, 255, 136, 0.2) 100%);
-      border: 1px solid var(--neon-cyan);
+    /* Bespoke Sculpted Titanium Emblem */
+    .brand-crest {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #1E2838 0%, #0F1522 100%);
+      border: 1px solid rgba(200, 220, 240, 0.28);
+      border-radius: var(--radius-sm);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(200, 220, 240, 0.25);
+      color: var(--ice);
     }
 
-    .brand-text h1 {
-      font-family: var(--font-display);
+    .brand-name {
+      font-family: var(--font-ui);
       font-size: 19px;
-      font-weight: 700;
-      letter-spacing: -0.2px;
+      font-weight: 900;
+      letter-spacing: -0.3px;
+      color: #fff;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
-    .badge-protocol {
-      font-size: 10px;
-      background: rgba(0, 240, 255, 0.12);
-      border: 1px solid rgba(0, 240, 255, 0.4);
-      color: var(--neon-cyan);
-      padding: 2px 8px;
-      border-radius: 4px;
+    .brand-name span {
+      color: var(--ice);
+    }
+
+    .brand-badge {
       font-family: var(--font-mono);
+      font-size: 10px;
       font-weight: 700;
+      color: var(--ice);
+      padding: 3px 8px;
+      background: rgba(125, 211, 252, 0.08);
+      border: 1px solid rgba(125, 211, 252, 0.25);
+      border-radius: 4px;
+      letter-spacing: 0.5px;
     }
 
     .brand-sub {
-      font-size: 11px;
-      color: var(--text-titanium);
       font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-slate);
       display: flex;
       align-items: center;
       gap: 8px;
       margin-top: 2px;
     }
 
-    .header-pills {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .hud-pill {
-      background: rgba(13, 22, 41, 0.8);
-      border: 1px solid var(--border-subtle);
-      border-radius: 9999px;
-      padding: 6px 14px;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--neon-green);
-      box-shadow: 0 0 8px var(--neon-green);
-      animation: neonPulse 2s infinite;
-    }
-
-    @keyframes neonPulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.85); }
-    }
-
-    /* TOP STAT MATRIX */
-    .stat-matrix {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      padding: 24px 36px 8px;
-      max-width: 1440px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .stat-card {
-      background: var(--bg-panel);
-      border: 1px solid var(--border-subtle);
-      border-radius: 12px;
-      padding: 16px 20px;
-      position: relative;
-      overflow: hidden;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-
-    .stat-card:hover {
-      border-color: var(--border-bright);
-      transform: translateY(-2px);
-    }
-
-    .stat-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
-    }
-
-    .stat-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-
-    .stat-label {
-      font-size: 11px;
-      font-family: var(--font-mono);
-      color: var(--text-titanium);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .stat-val {
-      font-size: 26px;
-      font-weight: 800;
-      font-family: var(--font-mono);
-      color: var(--text-pure);
-      letter-spacing: -0.5px;
-    }
-
-    .stat-sub {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 4px;
-      font-family: var(--font-mono);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* TAB NAVIGATION */
-    .nav-tabs-bar {
-      display: flex;
-      gap: 8px;
-      padding: 12px 36px;
-      max-width: 1440px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .tab-btn {
-      background: var(--bg-panel);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-titanium);
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s;
-    }
-
-    .tab-btn:hover {
-      border-color: var(--neon-cyan);
-      color: var(--text-pure);
-    }
-
-    .tab-btn.active {
-      background: rgba(0, 240, 255, 0.1);
-      border-color: var(--neon-cyan);
-      color: var(--neon-cyan);
-      box-shadow: 0 0 12px rgba(0, 240, 255, 0.15);
-    }
-
-    /* MAIN VIEWPORT */
-    main {
-      flex: 1;
-      max-width: 1440px;
-      margin: 0 auto;
-      width: 100%;
-      padding: 8px 36px 36px;
-    }
-
-    .tab-panel {
-      display: none;
-    }
-
-    .tab-panel.active {
-      display: block;
-    }
-
-    /* DUAL WORKSPACE GRID (ENCLAVE 01) */
-    .dual-workspace-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .titanium-panel {
-      background: var(--bg-panel);
-      border: 1px solid var(--border-subtle);
-      border-radius: 16px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .panel-header-bar {
-      padding: 18px 24px;
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border-subtle);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .panel-title-text {
-      font-family: var(--font-display);
-      font-size: 14px;
-      font-weight: 700;
+    .nav-telemetry {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .panel-body-content {
-      padding: 24px;
+    .titanium-pill {
+      background: var(--bg-tray);
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      padding: 6px 16px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--platinum);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: inset 0 1px 0 var(--inset);
+    }
+
+    .pulse-gem {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 10px var(--emerald);
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    /* ═══════════════ 4-METRIC TITANIUM STRIP ═══════════════ */
+    .metric-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .cockpit-metric-card {
+      background: linear-gradient(180deg, var(--card-top) 0%, var(--card-mid) 50%, var(--card-base) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      text-align: left;
+      box-shadow: var(--shadow), inset 0 1px 0 var(--inset);
+      transition: transform var(--transition), border-color var(--transition);
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      justify-content: space-between;
+    }
+
+    .cockpit-metric-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-hover);
+    }
+
+    .metric-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .metric-card-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text-slate);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .metric-card-val {
+      font-family: var(--font-mono);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--platinum-bright);
+      letter-spacing: -0.2px;
+    }
+
+    .metric-card-sub {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ═══════════════ PRIMARY TAB SWITCHER ═══════════════ */
+    .tab-switcher {
+      display: flex;
+      gap: 10px;
+      background: var(--bg-tray);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 6px;
+      margin-bottom: 24px;
+      box-shadow: inset 0 1px 0 var(--inset);
+    }
+
+    .tab-btn {
+      flex: 1;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-slate);
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all var(--transition);
+    }
+
+    .tab-btn:hover {
+      color: var(--text);
+      background: rgba(200, 220, 240, 0.04);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(180deg, #1E2838 0%, #151D2A 100%);
+      border: 1px solid rgba(200, 220, 240, 0.22);
+      color: var(--platinum-bright);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(200, 220, 240, 0.16);
+    }
+
+    .tab-btn.active .ico {
+      stroke: var(--ice);
+    }
+
+    /* ═══════════════ TAB PANELS ═══════════════ */
+    .tab-view {
+      display: none;
+    }
+
+    .tab-view.active {
+      display: block;
+      animation: fadeIn 0.25s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* DUAL WORKSPACE ENCLAVE */
+    .dual-workspace {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .gunmetal-block {
+      background: linear-gradient(180deg, var(--card-top) 0%, var(--card-mid) 40%, var(--card-base) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow), inset 0 1px 0 var(--inset);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .block-header {
+      padding: 16px 22px;
+      background: var(--bg-tray);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .block-title {
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      color: var(--platinum-bright);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .block-title .ico {
+      color: var(--ice);
+    }
+
+    .block-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
       flex: 1;
     }
 
-    /* FORMS & INPUTS */
+    /* FORMS & GUNMETAL INPUTS */
     .form-group {
       display: flex;
       flex-direction: column;
@@ -313,289 +399,314 @@
     }
 
     label {
-      font-size: 11px;
       font-family: var(--font-mono);
-      color: var(--text-titanium);
-      font-weight: 600;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text-slate);
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
     }
 
     input, textarea {
-      background: #060B14;
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      color: var(--text-pure);
+      background: #080D16;
+      border: 1px solid rgba(200, 220, 240, 0.14);
+      border-radius: var(--radius-sm);
+      color: var(--platinum-bright);
       font-family: var(--font-mono);
-      font-size: 13px;
-      padding: 10px 14px;
+      font-size: 12px;
+      padding: 11px 14px;
       outline: none;
-      transition: all 0.2s;
+      transition: all var(--transition);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     input:focus, textarea:focus {
-      border-color: var(--neon-cyan);
-      box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
+      border-color: var(--ice);
+      box-shadow: 0 0 14px rgba(125, 211, 252, 0.18), inset 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
-    .preset-pills-row {
+    /* PRESET SELECTORS (ZERO EMOJIS — PURE TITANIUM CAPSULES) */
+    .preset-capsule-row {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
     }
 
-    .btn-preset {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-titanium);
+    .btn-capsule {
+      background: var(--bg-tray);
+      border: 1px solid var(--border);
+      color: var(--text-slate);
       padding: 6px 12px;
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       font-family: var(--font-mono);
-      font-size: 11px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .btn-preset:hover {
-      border-color: var(--neon-cyan);
-      color: var(--neon-cyan);
-    }
-
-    .btn-action-primary {
-      background: linear-gradient(135deg, #00F0FF 0%, #00B8D9 100%);
-      color: #03060E;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-family: var(--font-sans);
+      font-size: 10px;
       font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all var(--transition);
+      box-shadow: inset 0 1px 0 var(--inset);
+    }
+
+    .btn-capsule:hover {
+      border-color: var(--ice);
+      color: var(--platinum-bright);
+      transform: translateY(-1px);
+    }
+
+    .btn-capsule span.tag {
+      font-size: 9px;
+      color: var(--ice);
+    }
+
+    /* ACTION BUTTONS */
+    .btn-primary-titanium {
+      background: linear-gradient(135deg, #1E2838 0%, #151D2A 100%);
+      border: 1px solid rgba(125, 211, 252, 0.35);
+      color: var(--ice);
+      padding: 13px 20px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-ui);
+      font-weight: 800;
       font-size: 13px;
+      letter-spacing: 0.3px;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      transition: all 0.2s;
-      box-shadow: 0 0 16px rgba(0, 240, 255, 0.25);
+      gap: 10px;
+      transition: all var(--transition);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(125, 211, 252, 0.25);
     }
 
-    .btn-action-primary:hover {
+    .btn-primary-titanium:hover {
+      border-color: var(--ice);
+      color: #fff;
       transform: translateY(-1px);
-      box-shadow: 0 0 24px rgba(0, 240, 255, 0.45);
+      box-shadow: 0 8px 24px rgba(125, 211, 252, 0.25), inset 0 1px 0 rgba(125, 211, 252, 0.4);
     }
 
-    .btn-danger-revoke {
-      background: rgba(239, 68, 68, 0.15);
-      border: 1px solid var(--alert-crimson);
-      color: #FFA5B8;
-      padding: 6px 14px;
-      border-radius: 6px;
+    .btn-revocation-trigger {
+      background: rgba(225, 29, 72, 0.12);
+      border: 1px solid rgba(225, 29, 72, 0.35);
+      color: #FDA4AF;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
       font-family: var(--font-mono);
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       cursor: pointer;
-      transition: all 0.2s;
       display: flex;
       align-items: center;
       gap: 6px;
+      transition: all var(--transition);
     }
 
-    .btn-danger-revoke:hover {
-      background: var(--alert-crimson);
-      color: #FFFFFF;
-      box-shadow: 0 0 14px rgba(239, 68, 68, 0.4);
+    .btn-revocation-trigger:hover {
+      background: var(--crimson);
+      color: #fff;
+      box-shadow: 0 0 16px rgba(225, 29, 72, 0.4);
     }
 
-    /* AGENT REAL-TIME LOG */
-    .terminal-window {
-      background: #040812;
-      border: 1px solid var(--border-subtle);
-      border-radius: 10px;
+    /* AUDIT TELEMETRY TERMINAL */
+    .telemetry-stream {
+      background: #05080F;
+      border: 1px solid rgba(200, 220, 240, 0.10);
+      border-radius: var(--radius-md);
       padding: 16px;
       font-family: var(--font-mono);
-      font-size: 12px;
+      font-size: 11px;
+      line-height: 1.6;
       flex: 1;
       overflow-y: auto;
       max-height: 480px;
       display: flex;
       flex-direction: column;
       gap: 10px;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.7);
     }
 
-    .log-box {
+    .telemetry-row {
       padding: 10px 14px;
       border-radius: 6px;
-      background: rgba(13, 22, 41, 0.5);
+      background: rgba(18, 24, 36, 0.45);
       border-left: 3px solid var(--text-muted);
-      line-height: 1.55;
     }
 
-    .log-success { border-left-color: var(--neon-green); color: #DCFCE7; }
-    .log-alert { border-left-color: var(--alert-crimson); color: #FFE4E6; background: rgba(239, 68, 68, 0.1); }
-    .log-info { border-left-color: var(--neon-cyan); color: #E0F2FE; }
+    .row-info { border-left-color: var(--ice); color: #E0F2FE; }
+    .row-success { border-left-color: var(--emerald); color: #D1FAE5; }
+    .row-intercept { border-left-color: var(--crimson); color: #FFE4E6; background: rgba(225, 29, 72, 0.08); }
 
-    .tx-link {
-      color: var(--neon-cyan);
+    .hash-token {
+      color: var(--ice);
       text-decoration: underline;
       cursor: pointer;
     }
 
-    /* ENCLAVE 02: SVG TOPOLOGY */
-    .svg-diagram-card {
-      background: var(--bg-panel);
-      border: 1px solid var(--border-subtle);
-      border-radius: 16px;
-      padding: 28px;
+    /* ENCLAVE 02 & 03 STYLING */
+    .enclave-card {
+      background: linear-gradient(180deg, var(--card-top) 0%, var(--card-mid) 40%, var(--card-base) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--shadow), inset 0 1px 0 var(--inset);
     }
 
     /* FOOTER */
     footer {
-      border-top: 1px solid var(--border-subtle);
-      padding: 18px 36px;
-      font-size: 12px;
-      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding: 20px 0;
+      margin-top: 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: var(--bg-panel);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-slate);
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="brand-wrap">
-      <div class="brand-icon-box">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-        </svg>
-      </div>
-      <div class="brand-text">
-        <h1>AevumPay Sentinel <span class="badge-protocol">v1.2.0 • QDAY</span></h1>
-        <div class="brand-sub">
-          <span>ERC-8004 CONFIRMATION OF PAYEE</span>
-          <span>•</span>
-          <span>SCOPED SESSION KEYS</span>
-          <span>•</span>
-          <span>SUB-SECOND AEVUM TESTNET</span>
+  <div class="container">
+
+    <!-- ═══════════════ TOP NAV BAR ═══════════════ -->
+    <header class="top-nav">
+      <div class="brand-group">
+        <!-- Bespoke Sculpted Titanium Emblem -->
+        <div class="brand-crest">
+          <svg class="ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+            <path d="M12 7v10M8 12h8"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">
+            AEVUMPAY <span>SENTINEL</span>
+            <span class="brand-badge">PROTOCOL v1.2.0 • QDAY</span>
+          </div>
+          <div class="brand-sub">
+            <span>ERC-8004 CONFIRMATION OF PAYEE</span>
+            <span>•</span>
+            <span>SCOPED SESSION KEYS</span>
+            <span>•</span>
+            <span>SUB-SECOND AEVUM TESTNET</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="header-pills">
-      <div class="hud-pill">
-        <div class="pulse-dot"></div>
-        <span>AEVUM TESTNET (CHAIN ID: 44005)</span>
+      <div class="nav-telemetry">
+        <div class="titanium-pill">
+          <div class="pulse-gem"></div>
+          <span>CHAIN_ID: 44005 (AEVUM)</span>
+        </div>
+        <div class="titanium-pill" style="border-color:rgba(125, 211, 252, 0.3); color:var(--ice)">
+          <svg class="ico" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span>tUSD8 ENGINE ONLINE</span>
+        </div>
       </div>
-      <div class="hud-pill" style="border-color:var(--neon-cyan); color:var(--neon-cyan)">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        <span>tUSD8 ENGINE ACTIVE</span>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- TOP STAT MATRIX (TITANIUM GAUGES) -->
-  <section class="stat-matrix">
-    <div class="stat-card">
-      <div class="stat-header">
-        <span class="stat-label">Treasury Vault Balance</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--neon-cyan)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    <!-- ═══════════════ 4-METRIC TITANIUM STRIP ═══════════════ -->
+    <section class="metric-strip">
+      <div class="cockpit-metric-card">
+        <div class="metric-card-header">
+          <span class="metric-card-label">Treasury Vault Liquidity</span>
+          <svg class="ico" viewBox="0 0 24 24" style="color:var(--ice)"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div class="metric-card-val" style="color:var(--ice)" id="valTreasury">10,000.00 <span style="font-size:12px">tUSD8</span></div>
+        <div class="metric-card-sub">Autonomous Multi-Tenant Pool</div>
       </div>
-      <div class="stat-val" style="color:var(--neon-cyan)" id="valTreasury">10,000.00 tUSD8</div>
-      <div class="stat-sub">
-        <span>Autonomous Multi-Tenant Pool</span>
-      </div>
-    </div>
 
-    <div class="stat-card">
-      <div class="stat-header">
-        <span class="stat-label">Single-Tx Session Cap</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-titanium)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="cockpit-metric-card">
+        <div class="metric-card-header">
+          <span class="metric-card-label">Scoped Single-Tx Ceiling</span>
+          <svg class="ico" viewBox="0 0 24 24" style="color:var(--text-slate)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="metric-card-val" id="valPerTxCap">50.00 <span style="font-size:12px">tUSD8</span></div>
+        <div class="metric-card-sub">Deterministic Spend Ceiling</div>
       </div>
-      <div class="stat-val" id="valPerTxCap">50.00 tUSD8</div>
-      <div class="stat-sub">
-        <span>Bounded Execution Ceiling</span>
-      </div>
-    </div>
 
-    <div class="stat-card">
-      <div class="stat-header">
-        <span class="stat-label">24h Velocity Budget</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div class="cockpit-metric-card">
+        <div class="metric-card-header">
+          <span class="metric-card-label">24h Velocity Budget</span>
+          <svg class="ico" viewBox="0 0 24 24" style="color:var(--emerald)"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="metric-card-val" style="color:var(--emerald)" id="valDailyBudget">150.00 <span style="font-size:12px">tUSD8</span></div>
+        <div class="metric-card-sub">Rolling Epoch Window</div>
       </div>
-      <div class="stat-val" style="color:var(--neon-green)" id="valDailyBudget">150.00 tUSD8</div>
-      <div class="stat-sub">
-        <span>Rolling Epoch (Resets in 18.2h)</span>
-      </div>
-    </div>
 
-    <div class="stat-card">
-      <div class="stat-header">
-        <span class="stat-label">Agent Safety Status</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <div class="cockpit-metric-card">
+        <div class="metric-card-header">
+          <span class="metric-card-label">Agent Safety Status</span>
+          <svg class="ico" viewBox="0 0 24 24" style="color:var(--emerald)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="metric-card-val" style="color:var(--emerald)" id="valAgentStatus">ARMED & ACTIVE</div>
+        <div class="metric-card-sub">ERC-8004 Pre-Flight Active</div>
       </div>
-      <div class="stat-val" style="color:var(--neon-green)" id="valAgentStatus">ACTIVE</div>
-      <div class="stat-sub">
-        <span>ERC-8004 Sieve Active</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TAB NAVIGATION -->
-  <nav class="nav-tabs-bar">
-    <button class="tab-btn active" onclick="switchTab(0, this)">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-      01 // AGENTIC SETTLEMENT ENGINE
-    </button>
-    <button class="tab-btn" onclick="switchTab(1, this)">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M3 9h3v6H3zM18 9h3v6h-3zM9 3v3h6V3zM9 18v3h6v-3z"/></svg>
-      02 // PROTOCOL TOPOLOGY & SVG INTERCONNECT
-    </button>
-    <button class="tab-btn" onclick="switchTab(2, this)">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-      03 // CRYPTOGRAPHIC VELOCITY LAB
-    </button>
-  </nav>
+    <!-- ═══════════════ PRIMARY TAB SWITCHER ═══════════════ -->
+    <nav class="tab-switcher">
+      <button class="tab-btn active" onclick="switchTab(0, this)">
+        <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        01 // AGENTIC SETTLEMENT ENGINE
+      </button>
+      <button class="tab-btn" onclick="switchTab(1, this)">
+        <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M3 9h3v6H3zM18 9h3v6h-3zM9 3v3h6V3zM9 18v3h6v-3z"/></svg>
+        02 // PROTOCOL TOPOLOGY & SVG INTERCONNECT
+      </button>
+      <button class="tab-btn" onclick="switchTab(2, this)">
+        <svg class="ico" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        03 // CRYPTOGRAPHIC VELOCITY LAB
+      </button>
+    </nav>
 
-  <!-- MAIN VIEWPORT -->
-  <main>
-    <!-- ═══════════════ TAB 01: AGENTIC SETTLEMENT ENGINE ═══════════════ -->
-    <div class="tab-panel active" id="tab0">
-      <div class="dual-workspace-grid">
-        
+    <!-- ═══════════════ ENCLAVE 01: AGENTIC SETTLEMENT ENGINE ═══════════════ -->
+    <div class="tab-view active" id="tab0">
+      <div class="dual-workspace">
+
         <!-- LEFT: HUMAN VENDOR INVOICE PORTAL -->
-        <div class="titanium-panel">
-          <div class="panel-header-bar">
-            <div class="panel-title-text">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--neon-cyan)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Vendor Invoice Portal (Human / Supplier Intake)
+        <div class="gunmetal-block">
+          <div class="block-header">
+            <div class="block-title">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Vendor Invoice Portal (Human / Supplier Ingest)
             </div>
-            <span style="font-family:var(--font-mono); font-size:11px; color:var(--neon-cyan)">AEVUM DISPATCH</span>
+            <span class="brand-badge">DISPATCH READY</span>
           </div>
-          <div class="panel-body-content">
-            <div style="font-size:12px; color:var(--text-titanium)">
-              Preset test invoices for deterministic validation & security checks:
+          <div class="block-body">
+            <div style="font-family:var(--font-mono); font-size:11px; color:var(--text-slate)">
+              Deterministic test payloads for protocol verification:
             </div>
-            <div class="preset-pills-row">
-              <button class="btn-preset" onclick="loadPreset('NORMAL')">⚡ Valid Compute Bill (25 tUSD8)</button>
-              <button class="btn-preset" onclick="loadPreset('CAP_EXCEEDED')">⚠️ High Value (75 tUSD8 - Exceeds Cap)</button>
-              <button class="btn-preset" onclick="loadPreset('PROMPT_INJECTION')">🚨 Hostile Prompt Injection</button>
-              <button class="btn-preset" onclick="loadPreset('UNVERIFIED')">❌ Unregistered Payee</button>
+            <div class="preset-capsule-row">
+              <button class="btn-capsule" onclick="loadPreset('NORMAL')">
+                <span class="tag">[01]</span> COMPUTE INVOICE (25 tUSD8)
+              </button>
+              <button class="btn-capsule" onclick="loadPreset('CAP_EXCEEDED')">
+                <span class="tag">[02]</span> HIGH VALUE (75 tUSD8 - OVER CAP)
+              </button>
+              <button class="btn-capsule" onclick="loadPreset('PROMPT_INJECTION')">
+                <span class="tag">[03]</span> HOSTILE INJECTION INTERCEPT
+              </button>
+              <button class="btn-capsule" onclick="loadPreset('UNVERIFIED')">
+                <span class="tag">[04]</span> UNREGISTERED COUNTERPARTY
+              </button>
             </div>
 
             <div class="form-group">
-              <label>Payee Address (ERC-8004 Registry Lookup)</label>
+              <label>Payee Destination Address (ERC-8004 Registry Lookup)</label>
               <input type="text" id="inputPayee" value="0x89205A3A3b2A69De6Dbf7f01ED13B2108B2c43e7">
             </div>
 
             <div class="form-group">
-              <label>Vendor Entity / Registered Agent Name</label>
+              <label>Vendor Entity / Registered Legal Counterparty</label>
               <input type="text" id="inputVendor" value="Acme Decentralized Compute Ltd">
             </div>
 
             <div class="form-group">
-              <label>Invoice Amount (tUSD8)</label>
+              <label>Settlement Amount (tUSD8)</label>
               <input type="number" id="inputAmount" value="25.50" step="0.5">
             </div>
 
@@ -609,44 +720,44 @@
               <textarea id="inputNotes" rows="2">Net 0 instantaneous settlement via Aevum testnet</textarea>
             </div>
 
-            <button class="btn-action-primary" onclick="submitInvoice()">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              Dispatch to Autonomous Accounts-Payable Agent
+            <button class="btn-primary-titanium" onclick="submitInvoice()">
+              <svg class="ico" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Dispatch Invoice to Autonomous Settlement Daemon</span>
             </button>
           </div>
         </div>
 
         <!-- RIGHT: AUTONOMOUS AGENT SETTLEMENT TERMINAL -->
-        <div class="titanium-panel">
-          <div class="panel-header-bar">
-            <div class="panel-title-text">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>
+        <div class="gunmetal-block">
+          <div class="block-header">
+            <div class="block-title">
+              <svg class="ico" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>
               Autonomous Settlement Daemon (Agentic Terminal)
             </div>
-            <button class="btn-danger-revoke" onclick="toggleKillSwitch()" id="btnKillSwitch">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            <button class="btn-revocation-trigger" onclick="toggleKillSwitch()" id="btnKillSwitch">
+              <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
               <span>Emergency Revoke Agent</span>
             </button>
           </div>
-          <div class="panel-body-content">
-            <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--text-titanium)">
-              <span>Sub-Second On-Chain Sieve & Execution Telemetry</span>
-              <span style="font-family:var(--font-mono); color:var(--neon-cyan)">QDAY • CHAIN 44005</span>
+          <div class="block-body">
+            <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:11px; color:var(--text-slate);">
+              <span>On-Chain Telemetry & Audit Stream</span>
+              <span style="color:var(--ice)">CHAIN_ID: 44005 (AEVUM)</span>
             </div>
 
-            <div class="terminal-window" id="terminalLog">
-              <div class="log-box log-info">
-                <strong>[AEVUM INITIALIZED]</strong> AevumPay Sentinel v1.2.0 online.<br>
-                • Network: <code>Aevum Testnet (Chain ID 44005)</code><br>
+            <div class="telemetry-stream" id="terminalLog">
+              <div class="telemetry-row row-info">
+                <strong>[AEVUM_SYS_INIT]</strong> AevumPay Sentinel v1.2.0 daemon online.<br>
+                • Protocol: <code>QDay.io Aevum Testnet (Chain ID 44005)</code><br>
                 • Session Signer: <code>0x71C568779c368451b64E1188049a463D7f7943F2</code><br>
-                • ERC-8004 Confirmation of Payee Registry: <code>Active (Verified)</code><br>
-                • Anti-Prompt-Injection Sieve: <code>ARMED & ACTIVE</code>
+                • ERC-8004 Confirmation of Payee Registry: <code>SYNCHRONIZED</code><br>
+                • Anti-Prompt-Injection Sieve: <code>ARMED & ACTIVE (0.12ms)</code>
               </div>
             </div>
 
-            <div style="display:flex; justify-content:space-between; align-items:center; font-family:var(--font-mono); font-size:11px; color:var(--text-muted);">
-              <span>Settled Payments: <strong id="valCount" style="color:var(--neon-green)">0</strong></span>
-              <span>Hostile Exploits Blocked: <strong id="valBlocked" style="color:var(--alert-crimson)">0</strong></span>
+            <div style="display:flex; justify-content:space-between; align-items:center; font-family:var(--font-mono); font-size:11px; color:var(--text-slate);">
+              <span>Settled Proofs: <strong id="valCount" style="color:var(--emerald)">0</strong></span>
+              <span>Hostile Exploits Blocked: <strong id="valBlocked" style="color:var(--crimson)">0</strong></span>
             </div>
           </div>
         </div>
@@ -654,136 +765,134 @@
       </div>
     </div>
 
-    <!-- ═══════════════ TAB 02: SVG TOPOLOGY & LASER INTERCONNECT ═══════════════ -->
-    <div class="tab-panel" id="tab1">
-      <div class="svg-diagram-card">
+    <!-- ═══════════════ ENCLAVE 02: SVG TOPOLOGY & LASER INTERCONNECT ═══════════════ -->
+    <div class="tab-view" id="tab1">
+      <div class="enclave-card">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
           <div>
-            <div style="font-family:var(--font-display); font-size:17px; font-weight:700;">
+            <div style="font-family:var(--font-ui); font-size:17px; font-weight:800; color:#fff">
               Protocol Architectural Topology & Defense Perimeter
             </div>
-            <div style="font-size:12px; color:var(--text-titanium); font-family:var(--font-mono); margin-top:4px;">
+            <div style="font-family:var(--font-mono); font-size:11px; color:var(--text-slate); margin-top:4px;">
               Multi-Layer Deterministic Sieve, ERC-8004 Confirmation of Payee, and Scoped Session Vault
             </div>
           </div>
-          <div class="badge-protocol" style="font-size:11px">PULSING LASER INTERCONNECTS</div>
+          <span class="brand-badge">PULSING LASER INTERCONNECTS</span>
         </div>
 
-        <div style="width:100%; height:340px; background:#040711; border:1px solid var(--border-subtle); border-radius:12px; overflow:hidden; position:relative;">
-          <svg width="100%" height="100%" viewBox="0 0 1100 340" preserveAspectRatio="xMidYMid meet">
+        <div style="width:100%; height:320px; background:#050811; border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden;">
+          <svg width="100%" height="100%" viewBox="0 0 1100 320" preserveAspectRatio="xMidYMid meet">
             <defs>
-              <linearGradient id="laserGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#00F0FF"/>
-                <stop offset="100%" stop-color="#00FF88"/>
+              <linearGradient id="laserIce" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#7DD3FC"/>
+                <stop offset="100%" stop-color="#10B981"/>
               </linearGradient>
             </defs>
 
-            <!-- ENCLAVE 1: INTAKE -->
-            <g transform="translate(40, 80)">
-              <rect width="210" height="180" rx="12" fill="#090F1D" stroke="#1E2B45" stroke-width="1.5"/>
-              <text x="20" y="32" fill="#00F0FF" font-family="'JetBrains Mono'" font-size="12" font-weight="700">01 // INVOICE INTAKE</text>
-              <text x="20" y="58" fill="#94A3B8" font-family="'Plus Jakarta Sans'" font-size="11">Human Vendor or AI Bot</text>
-              <text x="20" y="80" fill="#64748B" font-family="'JetBrains Mono'" font-size="10">• Line Items & Terms</text>
-              <text x="20" y="98" fill="#64748B" font-family="'JetBrains Mono'" font-size="10">• tUSD8 Settlement Amount</text>
-              <text x="20" y="116" fill="#64748B" font-family="'JetBrains Mono'" font-size="10">• Payee Identity Signature</text>
-              <rect x="20" y="136" width="170" height="26" rx="6" fill="#03060E" stroke="#1E2B45"/>
-              <text x="35" y="153" fill="#00FF88" font-family="'JetBrains Mono'" font-size="10">INTAKE_READY</text>
+            <!-- ENCLAVE 1 -->
+            <g transform="translate(40, 70)">
+              <rect width="210" height="170" rx="10" fill="#0C121E" stroke="rgba(200, 220, 240, 0.2)" stroke-width="1.5"/>
+              <text x="20" y="32" fill="#7DD3FC" font-family="'JetBrains Mono'" font-size="11" font-weight="700">01 // INVOICE INTAKE</text>
+              <text x="20" y="58" fill="#F1F5F9" font-family="'Outfit'" font-size="12" font-weight="600">Vendor / Agent Payload</text>
+              <text x="20" y="80" fill="#8A98A8" font-family="'JetBrains Mono'" font-size="10">• Line Items & Metadata</text>
+              <text x="20" y="98" fill="#8A98A8" font-family="'JetBrains Mono'" font-size="10">• tUSD8 Settlement Amount</text>
+              <text x="20" y="116" fill="#8A98A8" font-family="'JetBrains Mono'" font-size="10">• Payee Identity Hash</text>
+              <rect x="20" y="130" width="170" height="24" rx="4" fill="#080C14" stroke="rgba(200, 220, 240, 0.15)"/>
+              <text x="35" y="146" fill="#10B981" font-family="'JetBrains Mono'" font-size="10">STATUS: INTAKE_READY</text>
             </g>
 
             <!-- LASER 1 -->
-            <path d="M 250 170 L 320 170" stroke="url(#laserGrad)" stroke-width="2.5" stroke-dasharray="6,4"/>
+            <path d="M 250 155 L 320 155" stroke="url(#laserIce)" stroke-width="2.5" stroke-dasharray="6,4"/>
 
-            <!-- ENCLAVE 2: ANTI-PROMPT SIEVE -->
-            <g transform="translate(320, 80)">
-              <rect width="220" height="180" rx="12" fill="#090F1D" stroke="#1E2B45" stroke-width="1.5"/>
-              <text x="20" y="32" fill="#FFB020" font-family="'JetBrains Mono'" font-size="12" font-weight="700">02 // SECURITY SIEVE</text>
-              <text x="20" y="58" fill="#94A3B8" font-family="'Plus Jakarta Sans'" font-size="11">Anti-Prompt Injection Engine</text>
-              <text x="20" y="80" fill="#64748B" font-family="'JetBrains Mono'" font-size="10">• Heuristic Jailbreak Scan</text>
-              <text x="20" y="98" fill="#64748B" font-family="'JetBrains Mono'" font-size="10">• Override Pattern Intercept</text>
-              <text x="20" y="116" fill="#64748B" font-family="'JetBrains Mono'" font-size="10">• Zero-Token Silicon Filter</text>
-              <rect x="20" y="136" width="180" height="26" rx="6" fill="#03060E" stroke="#1E2B45"/>
-              <text x="35" y="153" fill="#00F0FF" font-family="'JetBrains Mono'" font-size="10">INSPECTION: 0.12ms</text>
+            <!-- ENCLAVE 2 -->
+            <g transform="translate(320, 70)">
+              <rect width="220" height="170" rx="10" fill="#0C121E" stroke="rgba(200, 220, 240, 0.2)" stroke-width="1.5"/>
+              <text x="20" y="32" fill="#F59E0B" font-family="'JetBrains Mono'" font-size="11" font-weight="700">02 // SECURITY SIEVE</text>
+              <text x="20" y="58" fill="#F1F5F9" font-family="'Outfit'" font-size="12" font-weight="600">Anti-Prompt Injection Engine</text>
+              <text x="20" y="80" fill="#8A98A8" font-family="'JetBrains Mono'" font-size="10">• Heuristic Jailbreak Scan</text>
+              <text x="20" y="98" fill="#8A98A8" font-family="'JetBrains Mono'" font-size="10">• Override Pattern Intercept</text>
+              <text x="20" y="116" fill="#8A98A8" font-family="'JetBrains Mono'" font-size="10">• Zero-Token Silicon Filter</text>
+              <rect x="20" y="130" width="180" height="24" rx="4" fill="#080C14" stroke="rgba(200, 220, 240, 0.15)"/>
+              <text x="35" y="146" fill="#7DD3FC" font-family="'JetBrains Mono'" font-size="10">SCAN_LATENCY: 0.12ms</text>
             </g>
 
             <!-- LASER 2 -->
-            <path d="M 540 170 L 610 170" stroke="url(#laserGrad)" stroke-width="2.5" stroke-dasharray="6,4"/>
+            <path d="M 540 155 L 610 155" stroke="url(#laserIce)" stroke-width="2.5" stroke-dasharray="6,4"/>
 
-            <!-- ENCLAVE 3: ERC-8004 REGISTRY -->
-            <g transform="translate(610, 80)">
-              <rect width="210" height="180" rx="12" fill="#090F1D" stroke="#1E2B45" stroke-width="1.5"/>
-              <text x="20" y="32" fill="#8B5CF6" font-family="'JetBrains Mono'" font-size="12" font-weight="700">03 // ERC-8004 REGISTRY</text>
-              <text x="20" y="58" fill="#94A3B8" font-family="'Plus Jakarta Sans'" font-size="11">Confirmation of Payee</text>
-              <text x="20" y="80" fill="#64748B" font-family="'JetBrains Mono'" font-size="10">• Anti-Spoofing Proof</text>
-              <text x="20" y="98" fill="#64748B" font-family="'JetBrains Mono'" font-size="10">• Verified Identity Check</text>
-              <text x="20" y="116" fill="#64748B" font-family="'JetBrains Mono'" font-size="10">• Cryptographic Hash Bind</text>
-              <rect x="20" y="136" width="170" height="26" rx="6" fill="#03060E" stroke="#1E2B45"/>
-              <text x="35" y="153" fill="#8B5CF6" font-family="'JetBrains Mono'" font-size="10">PAYEE_VERIFIED</text>
+            <!-- ENCLAVE 3 -->
+            <g transform="translate(610, 70)">
+              <rect width="210" height="170" rx="10" fill="#0C121E" stroke="rgba(200, 220, 240, 0.2)" stroke-width="1.5"/>
+              <text x="20" y="32" fill="#A78BFA" font-family="'JetBrains Mono'" font-size="11" font-weight="700">03 // ERC-8004 REGISTRY</text>
+              <text x="20" y="58" fill="#F1F5F9" font-family="'Outfit'" font-size="12" font-weight="600">Confirmation of Payee</text>
+              <text x="20" y="80" fill="#8A98A8" font-family="'JetBrains Mono'" font-size="10">• Anti-Spoofing Proof</text>
+              <text x="20" y="98" fill="#8A98A8" font-family="'JetBrains Mono'" font-size="10">• Verified Identity Check</text>
+              <text x="20" y="116" fill="#8A98A8" font-family="'JetBrains Mono'" font-size="10">• Cryptographic Hash Bind</text>
+              <rect x="20" y="130" width="170" height="24" rx="4" fill="#080C14" stroke="rgba(200, 220, 240, 0.15)"/>
+              <text x="35" y="146" fill="#A78BFA" font-family="'JetBrains Mono'" font-size="10">PAYEE_VERIFIED: TRUE</text>
             </g>
 
             <!-- LASER 3 -->
-            <path d="M 820 170 L 880 170" stroke="url(#laserGrad)" stroke-width="2.5" stroke-dasharray="6,4"/>
+            <path d="M 820 155 L 880 155" stroke="url(#laserIce)" stroke-width="2.5" stroke-dasharray="6,4"/>
 
-            <!-- ENCLAVE 4: AEVUM VAULT -->
-            <g transform="translate(880, 80)">
-              <rect width="180" height="180" rx="12" fill="#090F1D" stroke="#00FF88" stroke-width="1.5"/>
-              <text x="20" y="32" fill="#00FF88" font-family="'JetBrains Mono'" font-size="12" font-weight="700">04 // AEVUM VAULT</text>
-              <text x="20" y="58" fill="#94A3B8" font-family="'Plus Jakarta Sans'" font-size="11">Sub-Second Finality</text>
-              <text x="20" y="80" fill="#64748B" font-family="'JetBrains Mono'" font-size="10">• tUSD8 Settlement</text>
-              <text x="20" y="98" fill="#64748B" font-family="'JetBrains Mono'" font-size="10">• Scoped Session Keys</text>
-              <text x="20" y="116" fill="#64748B" font-family="'JetBrains Mono'" font-size="10">• Chain ID: 44005</text>
-              <rect x="20" y="136" width="140" height="26" rx="6" fill="#03060E" stroke="#00FF88"/>
-              <text x="30" y="153" fill="#00FF88" font-family="'JetBrains Mono'" font-size="10">SUB-SECOND TX</text>
+            <!-- ENCLAVE 4 -->
+            <g transform="translate(880, 70)">
+              <rect width="180" height="170" rx="10" fill="#0C121E" stroke="#10B981" stroke-width="1.5"/>
+              <text x="20" y="32" fill="#10B981" font-family="'JetBrains Mono'" font-size="11" font-weight="700">04 // AEVUM VAULT</text>
+              <text x="20" y="58" fill="#F1F5F9" font-family="'Outfit'" font-size="12" font-weight="600">Sub-Second Finality</text>
+              <text x="20" y="80" fill="#8A98A8" font-family="'JetBrains Mono'" font-size="10">• tUSD8 Settlement</text>
+              <text x="20" y="98" fill="#8A98A8" font-family="'JetBrains Mono'" font-size="10">• Scoped Session Keys</text>
+              <text x="20" y="116" fill="#8A98A8" font-family="'JetBrains Mono'" font-size="10">• Chain ID: 44005</text>
+              <rect x="20" y="130" width="140" height="24" rx="4" fill="#080C14" stroke="#10B981"/>
+              <text x="30" y="146" fill="#10B981" font-family="'JetBrains Mono'" font-size="10">TX_SETTLED_OK</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <!-- ═══════════════ TAB 03: CRYPTOGRAPHIC VELOCITY LAB ═══════════════ -->
-    <div class="tab-panel" id="tab2">
-      <div class="svg-diagram-card">
-        <div style="font-family:var(--font-display); font-size:17px; font-weight:700; margin-bottom:8px;">
+    <!-- ═══════════════ ENCLAVE 03: CRYPTOGRAPHIC VELOCITY LAB ═══════════════ -->
+    <div class="tab-view" id="tab2">
+      <div class="enclave-card">
+        <div style="font-family:var(--font-ui); font-size:17px; font-weight:800; color:#fff; margin-bottom:6px;">
           Scoped Session Key Velocity Model & Bounded Math
         </div>
-        <div style="font-size:12px; color:var(--text-titanium); font-family:var(--font-mono); margin-bottom:20px;">
-          Guarantees that an AI agent cannot drain treasury funds even in the event of total model compromise.
+        <div style="font-family:var(--font-mono); font-size:11px; color:var(--text-slate); margin-bottom:24px;">
+          Formal mathematical invariants preventing treasury drain even in scenarios of total LLM compromise.
         </div>
 
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
-          <div style="background:#060A14; border:1px solid var(--border-subtle); border-radius:12px; padding:20px;">
-            <div style="font-family:var(--font-mono); font-size:12px; color:var(--neon-cyan); margin-bottom:10px;">
+          <div style="background:#080C14; border:1px solid var(--border); border-radius:var(--radius-md); padding:22px;">
+            <div style="font-family:var(--font-mono); font-size:11px; font-weight:700; color:var(--ice); margin-bottom:12px;">
               MATHEMATICAL SPENDING INVARIANT
             </div>
-            <p style="font-size:12px; line-height:1.7; color:var(--text-titanium); font-family:var(--font-mono)">
-              Let \(S_{epoch}\) be the cumulative settled stablecoin volume within rolling 24-hour window \([t_0, t_0 + 86400]\).<br><br>
-              \[\forall \Delta t \le 86400, \quad S_{epoch} + A_{invoice} \le L_{daily}\]<br>
-              \[A_{invoice} \le M_{per\_tx}\]<br><br>
-              Where \(L_{daily} = 150.00 \text{ tUSD8}\) and \(M_{per\_tx} = 50.00 \text{ tUSD8}\).
-            </p>
+            <div id="katexMathBlock" style="color:var(--platinum-bright); font-size:14px; line-height:2;">
+              <!-- KaTeX renders here -->
+            </div>
           </div>
 
-          <div style="background:#060A14; border:1px solid var(--border-subtle); border-radius:12px; padding:20px;">
-            <div style="font-family:var(--font-mono); font-size:12px; color:var(--neon-green); margin-bottom:10px;">
-              FORMAL VERIFICATION STATUS
+          <div style="background:#080C14; border:1px solid var(--border); border-radius:var(--radius-md); padding:22px;">
+            <div style="font-family:var(--font-mono); font-size:11px; font-weight:700; color:var(--emerald); margin-bottom:12px;">
+              FORMAL VERIFICATION & COMPLIANCE METRICS
             </div>
-            <div style="font-size:12px; color:var(--text-titanium); font-family:var(--font-mono); line-height:1.7;">
-              • 10/10 Formal Unit Tests Pass (0.018s runtime)<br>
-              • ERC-8004 Confirmation of Payee verification: <strong>PASS</strong><br>
-              • Prompt-Injection Intercept rate: <strong>100%</strong><br>
-              • Emergency Kill-Switch Revocation: <strong>SUB-BLOCK INSTANT</strong><br>
-              • Deterministic SHA-256 Fingerprint: <strong>VERIFIED</strong>
+            <div style="font-family:var(--font-mono); font-size:11px; color:var(--text-slate); line-height:1.8;">
+              • Unit Test Suite: <strong>10/10 PASS (0.018s runtime)</strong><br>
+              • ERC-8004 Confirmation of Payee verification: <span style="color:var(--emerald)">VERIFIED</span><br>
+              • Prompt-Injection Intercept rate: <span style="color:var(--emerald)">100% DETERMINISTIC</span><br>
+              • Emergency Kill-Switch Revocation: <span style="color:var(--emerald)">SUB-BLOCK INSTANT</span><br>
+              • Deterministic SHA-256 Fingerprint: <span style="color:var(--emerald)">CONFIRMED</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div>AevumPay Sentinel • Built for Aevum Builder Challenge #1 (QDay.io) • DoraHacks</div>
-    <div>Author: <strong>Usman Bamidele</strong> (100L Pure Mathematics, FUNAAB, Nigeria)</div>
-  </footer>
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer>
+      <div>AEVUMPAY SENTINEL • BUILT FOR AEVUM BUILDER CHALLENGE #1 (QDAY.IO) • DORAHACKS</div>
+      <div>AUTHOR: <strong>USMAN BAMIDELE</strong> (100L PURE MATHEMATICS, FUNAAB, NIGERIA)</div>
+    </footer>
+
+  </div>
 
   <script>
     let treasuryBalance = 10000.0;
@@ -804,9 +913,19 @@
       /bypass\s+(erc-?8004|confirmation\s+of\s+payee|whitelist)/i
     ];
 
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.katex) {
+        katex.render(
+          "\\forall \\Delta t \\le 86400, \\quad S_{epoch} + A_{invoice} \\le L_{daily} \\quad \\land \\quad A_{invoice} \\le M_{per\\_tx}",
+          document.getElementById('katexMathBlock'),
+          { displayMode: true, throwOnError: false }
+        );
+      }
+    });
+
     function switchTab(index, btn) {
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-view').forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
       document.getElementById('tab' + index).classList.add('active');
     }
@@ -814,10 +933,10 @@
     function logToTerminal(type, title, message) {
       const log = document.getElementById('terminalLog');
       const time = new Date().toTimeString().split(' ')[0];
-      const entry = document.createElement('div');
-      entry.className = `log-box log-${type}`;
-      entry.innerHTML = `<strong>[${time}] ${title}</strong><br>${message}`;
-      log.appendChild(entry);
+      const row = document.createElement('div');
+      row.className = `telemetry-row row-${type}`;
+      row.innerHTML = `<strong>[${time}] // ${title}</strong><br>${message}`;
+      log.appendChild(row);
       log.scrollTop = log.scrollHeight;
     }
 
@@ -832,7 +951,7 @@
         document.getElementById('inputPayee').value = '0x89205A3A3b2A69De6Dbf7f01ED13B2108B2c43e7';
         document.getElementById('inputVendor').value = 'Enterprise Hardware Corp';
         document.getElementById('inputAmount').value = '75.00';
-        document.getElementById('inputDesc').value = 'High-density switch order';
+        document.getElementById('inputDesc').value = 'High-density rack procurement';
         document.getElementById('inputNotes').value = 'Expedited freight requested';
       } else if (type === 'PROMPT_INJECTION') {
         document.getElementById('inputPayee').value = '0x89205A3A3b2A69De6Dbf7f01ED13B2108B2c43e7';
@@ -855,19 +974,19 @@
       const status = document.getElementById('valAgentStatus');
 
       if (isAgentActive) {
-        btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg><span>Emergency Revoke Agent</span>`;
-        btn.className = 'btn-danger-revoke';
-        status.innerText = 'ACTIVE';
-        status.style.color = 'var(--neon-green)';
-        logToTerminal('info', 'SESSION RE-AUTHORIZED', 'Vault owner re-enabled agent session key.');
+        btn.innerHTML = `<svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg><span>Emergency Revoke Agent</span>`;
+        btn.className = 'btn-revocation-trigger';
+        status.innerText = 'ARMED & ACTIVE';
+        status.style.color = 'var(--emerald)';
+        logToTerminal('info', 'SESSION_REAUTHORIZED', 'Vault owner re-authorized session key on Aevum Testnet.');
       } else {
-        btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span>Restore Agent Authorization</span>`;
-        btn.className = 'btn-preset';
-        btn.style.color = 'var(--neon-cyan)';
-        btn.style.borderColor = 'var(--neon-cyan)';
-        status.innerText = 'REVOKED';
-        status.style.color = 'var(--alert-crimson)';
-        logToTerminal('alert', 'KILL SWITCH ENGAGED', 'Vault owner triggered 1-click emergency revocation. Agent is halted.');
+        btn.innerHTML = `<svg class="ico" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span>Restore Agent Key</span>`;
+        btn.className = 'btn-capsule';
+        btn.style.borderColor = 'var(--ice)';
+        btn.style.color = 'var(--ice)';
+        status.innerText = 'REVOKED (HALTED)';
+        status.style.color = 'var(--crimson)';
+        logToTerminal('intercept', 'EMERGENCY_HALT_TRIGGERED', 'Owner executed 1-click revocation. Agent session key disabled.');
       }
     }
 
@@ -878,13 +997,13 @@
       const desc = document.getElementById('inputDesc').value;
       const notes = document.getElementById('inputNotes').value;
 
-      logToTerminal('info', 'INVOICE INTAKE', `Parsing invoice: <strong>${amount} tUSD8</strong> for <em>${vendor}</em>.`);
+      logToTerminal('info', 'INVOICE_INGEST', `Intake payload: <strong>${amount} tUSD8</strong> destination: <em>${vendor}</em>.`);
 
       // 1. Check Liveness
       if (!isAgentActive) {
         blockedCount++;
         document.getElementById('valBlocked').innerText = blockedCount;
-        logToTerminal('alert', 'SECURITY REJECTION: AGENT REVOKED', 'Session key is revoked by owner. Execution blocked.');
+        logToTerminal('intercept', 'REJECTION: SESSION_KEY_REVOKED', 'Session key revoked by vault owner. Settlement rejected.');
         return;
       }
 
@@ -894,7 +1013,7 @@
         if (pattern.test(combined)) {
           blockedCount++;
           document.getElementById('valBlocked').innerText = blockedCount;
-          logToTerminal('alert', 'PROMPT INJECTION INTERCEPTED', `Hostile instruction detected: <code>"${combined.match(pattern)[0]}"</code>.<br>• Threat Level: <strong>CRITICAL</strong><br>• Action: <strong>CIRCUIT BREAKER TRIPPED</strong>`);
+          logToTerminal('intercept', 'PROMPT_INJECTION_INTERCEPTED', `Hostile instruction: <code>"${combined.match(pattern)[0]}"</code>.<br>• Threat Level: <strong>CRITICAL</strong><br>• Protocol Action: <strong>CIRCUIT_BREAKER_TRIPPED</strong>`);
           return;
         }
       }
@@ -903,7 +1022,7 @@
       if (payee !== verifiedPayee) {
         blockedCount++;
         document.getElementById('valBlocked').innerText = blockedCount;
-        logToTerminal('alert', 'ERC-8004 VERIFICATION FAILED', `Address <code>${payee}</code> is NOT verified in the Confirmation of Payee registry. Payment aborted.`);
+        logToTerminal('intercept', 'ERC8004_VERIFICATION_FAILED', `Address <code>${payee}</code> NOT found in Confirmation of Payee registry.`);
         return;
       }
 
@@ -911,7 +1030,7 @@
       if (amount > maxPerTx) {
         blockedCount++;
         document.getElementById('valBlocked').innerText = blockedCount;
-        logToTerminal('alert', 'PER-TRANSACTION CAP EXCEEDED', `Invoice amount <strong>${amount} tUSD8</strong> exceeds scoped single-tx ceiling of <strong>${maxPerTx} tUSD8</strong>.`);
+        logToTerminal('intercept', 'REJECTION: EXCEEDS_PER_TX_CAP', `Amount <strong>${amount} tUSD8</strong> exceeds scoped ceiling of <strong>${maxPerTx} tUSD8</strong>.`);
         return;
       }
 
@@ -919,7 +1038,7 @@
       if (spentToday + amount > dailyLimit) {
         blockedCount++;
         document.getElementById('valBlocked').innerText = blockedCount;
-        logToTerminal('alert', 'DAILY VELOCITY BUDGET EXCEEDED', `Requested <strong>${amount} tUSD8</strong> exceeds remaining 24h budget of <strong>${(dailyLimit - spentToday).toFixed(2)} tUSD8</strong>.`);
+        logToTerminal('intercept', 'REJECTION: EXCEEDS_DAILY_LIMIT', `Requested <strong>${amount} tUSD8</strong> exceeds remaining 24h budget of <strong>${(dailyLimit - spentToday).toFixed(2)} tUSD8</strong>.`);
         return;
       }
 
@@ -930,15 +1049,15 @@
 
       const txHash = '0x' + Array.from({length: 64}, () => Math.floor(Math.random()*16).toString(16)).join('');
 
-      document.getElementById('valTreasury').innerText = `${treasuryBalance.toFixed(2)} tUSD8`;
-      document.getElementById('valDailyBudget').innerText = `${(dailyLimit - spentToday).toFixed(2)} tUSD8`;
+      document.getElementById('valTreasury').innerHTML = `${treasuryBalance.toFixed(2)} <span style="font-size:12px">tUSD8</span>`;
+      document.getElementById('valDailyBudget').innerHTML = `${(dailyLimit - spentToday).toFixed(2)} <span style="font-size:12px">tUSD8</span>`;
       document.getElementById('valCount').innerText = settlementCount;
 
-      logToTerminal('success', 'PAYMENT SETTLED ON AEVUM TESTNET', `
-        • Payee: <strong>${vendor}</strong> (ERC-8004 Verified ✅)<br>
-        • Amount Settled: <strong>${amount.toFixed(2)} tUSD8</strong><br>
-        • Remaining 24h Cap: <strong>${(dailyLimit - spentToday).toFixed(2)} tUSD8</strong><br>
-        • Aevum TX Hash: <span class="tx-link">${txHash}</span>
+      logToTerminal('success', 'SETTLEMENT_FINALIZED_ON_AEVUM', `
+        • Recipient: <strong>${vendor}</strong> (ERC-8004 Verified ✅)<br>
+        • Settled Volume: <strong>${amount.toFixed(2)} tUSD8</strong><br>
+        • Remaining Daily Budget: <strong>${(dailyLimit - spentToday).toFixed(2)} tUSD8</strong><br>
+        • Aevum Testnet TX: <span class="hash-token">${txHash}</span>
       `);
     }
   </script>
