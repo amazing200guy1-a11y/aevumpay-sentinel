@@ -4,11 +4,16 @@
 [![Chain](https://img.shields.io/badge/Aevum%20Testnet-Chain%20ID%2044005-00F0FF?style=flat-square)](https://qday.io)
 [![Token](https://img.shields.io/badge/Settlement-tUSD8-00B8D9?style=flat-square)](https://qday.io)
 [![Standard](https://img.shields.io/badge/Standard-ERC--8004%20Confirmation%20of%20Payee-7C3AED?style=flat-square)](./contracts/IERC8004.sol)
+[![Live Demo](https://img.shields.io/badge/Live%20Cockpit-Online-38BDF8?style=flat-square)](https://amazing200guy1-a11y.github.io/aevumpay-sentinel/)
+[![Video Walkthrough](https://img.shields.io/badge/Demo%20Video-YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/_ovmF2WB41I)
 [![License](https://img.shields.io/badge/License-MIT-334155?style=flat-square)](./LICENSE)
 
 > **Autonomous Agentic Payables & Settlement Protocol on Aevum Testnet (QDay.io).**  
 > Built for the **Aevum Builder Challenge #1** (DoraHacks).  
 > Solves the "AI Runaway Spending" problem by combining **ERC-8004 Confirmation of Payee**, **Scoped Session Keys**, **Rolling 24-Hour Spending Velocity Limits**, and an **Anti-Prompt-Injection Sieve** for safe, sub-second machine-to-machine commerce.
+
+📺 **Demo Video Walkthrough:** [Watch on YouTube](https://youtu.be/_ovmF2WB41I)  
+🚀 **Live Aerospace Cockpit:** [https://amazing200guy1-a11y.github.io/aevumpay-sentinel/](https://amazing200guy1-a11y.github.io/aevumpay-sentinel/)
 
 ---
 
